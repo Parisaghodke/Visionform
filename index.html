@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 60%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        .header {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .logo {
+            text-align: right;
+        }
+        .logo img {
+            width: 120px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            width:100% ;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group div {
+            width: 48%;
+        }
+        .rules {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .fee-details, .installments {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 15px;
+            background: #f9f9f9;
+        }
+        .qr-payment {
+            text-align: center;
+            margin-top: 15px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+        .qr-payment img {
+            width: 150px;
+            margin-top: 10px;
+        }
+        .signature-section {
+            margin-top: 15px;
+        }
+        .submit-btn {
+            width: 100%;
+            background: #ff6600;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .paymentscreenshot-section{
+            margin-top: 15px;
+        }
+        form {
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <img src="vision-logo.png" alt="Vision Institute Logo">
+    </div>
+    <div class="header">Admission Form</div>
+
+    <form action="https://formsubmit.co/visioncomputer96@gmail.com" method="POST" enctype="multipart/form-data" >
+        <label>Date of Admission:</label>
+        <input type="date" name="admission_date">
+
+        <label>Name:</label>
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="middle_name" placeholder="Middle Name">
+        <input type="text" name="last_name" placeholder="Last Name">
+
+        <label>Address:</label>
+        <input type="text" name="address">
+
+        <div class="form-group">
+            <div>
+                <label>Mobile:</label>
+                <input type="text" name="mobile">
+            </div>
+        </div>
+
+        <label>Email ID:</label>
+        <input type="email" name="email">
+
+        <label>Education Qualification:</label>
+        <input type="text" name="education">
+
+        <label>College / Company Name:</label>
+        <input type="text" name="college">
+
+        <div class="form-group">
+            <div>
+                <label>Gender:</label>
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div>
+                <label>Date of Birth:</label>
+                <input type="date" name="dob">
+            </div>
+        </div>
+
+        <label>Course:</label>
+        <input type="text" name="course">
+
+        <div class="form-group">
+            <div>
+                <label>Track:</label>
+                <select name="track">
+                    <option value="normal">Normal Track</option>
+                    <option value="fast">Fast Track</option>
+                </select>
+            </div>
+        </div>
+
+        <label>Batch Timing:</label>
+        <input type="text" name="batch_timing">
+
+        <label>Placement Facility Required:</label>
+        <select name="placement">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <div class="fee-details">
+            <label>Course Fee:</label>
+            <input type="text" name="course_fee">
+            <label>Total Fee Amount:</label>
+            <input type="text" name="total_fee">
+        </div>
+        <h3>Payment Options</h3>
+         <p><strong>UPI ID:</strong> example@upi</p>
+         <p><strong>Phone Number:</strong> +91 9766119340</p>
+        <!-- QR Code for Payment -->
+        <div class="qr-payment">
+            <label>Scan to Pay:</label>
+            <img src="qr-code.png" alt="Payment QR Code">
+            <p>Scan this QR code to complete your payment.</p>
+        </div>
+        <!--Payment screenshot section-->
+        <div class="paymentscreenshot-section">
+            <label>Upload Payment Screenshot</label>
+            <input type="file" name="paymentscreenshot" accept="image/*" required>
+
+        </div>
+
+        <input type="submit" class="submit-btn" value="Submit">
+       <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+    </form>
+</div>
+
+</body>
+</html>
